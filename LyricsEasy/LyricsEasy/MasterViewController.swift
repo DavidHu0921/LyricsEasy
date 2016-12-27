@@ -11,8 +11,9 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
+    var insertViewController: InsertViewController? = nil
+    
     var objects = [Any]()
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,12 @@ class MasterViewController: UITableViewController {
     func insertNewObject(_ sender: Any) {
         // to do 
         // insert txt
+        let splitViewController = self.splitViewController
+        let navigationController = splitViewController?.viewControllers[(splitViewController?.viewControllers.count)!-1] as! UINavigationController
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let insertViewController = storyboard.instantiateViewController(withIdentifier :"InsertViewController") as! InsertViewController
+        let navigation = UINavigationController(rootViewController: insertViewController)
+        navigationController.present(navigation, animated: true, completion: nil)
     }
 
     // MARK: - Segues

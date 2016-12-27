@@ -76,6 +76,40 @@
             </objects>
             <point key="canvasLocation" x="-856" y="-330"/>
         </scene>
+        <!--添加歌词-->
+        <scene sceneID="7Pz-ki-RUs">
+            <objects>
+                <viewController storyboardIdentifier="InsertViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yga-Sb-GjA" customClass="InsertViewController" customModule="LyricsEasy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Opd-yt-Vl8"/>
+                        <viewControllerLayoutGuide type="bottom" id="sed-kZ-DZg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SDl-p8-cXG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPW-1V-4Er">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kPW-1V-4Er" firstAttribute="centerY" secondItem="SDl-p8-cXG" secondAttribute="centerY" id="MmB-ei-yCp"/>
+                            <constraint firstItem="kPW-1V-4Er" firstAttribute="centerX" secondItem="SDl-p8-cXG" secondAttribute="centerX" id="fMf-x1-c8f"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="添加歌词" id="pLs-2R-ANX"/>
+                    <connections>
+                        <outlet property="asd" destination="kPW-1V-4Er" id="ikW-vN-81q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wLD-1l-dFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708" y="-1318"/>
+        </scene>
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
@@ -134,6 +168,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-45" y="129"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BX8-mV-rRe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vze-Tc-ohf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lhw-Kd-ntN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Yga-Sb-GjA" kind="relationship" relationship="rootViewController" id="Gk9-cV-MbJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QBO-9R-LeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39" y="-1318"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

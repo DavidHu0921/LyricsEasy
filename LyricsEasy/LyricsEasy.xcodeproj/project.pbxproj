@@ -15,6 +15,7 @@
 		68466DED1E115208000F6316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68466DEB1E115208000F6316 /* LaunchScreen.storyboard */; };
 		68466DF81E115208000F6316 /* LyricsEasyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68466DF71E115208000F6316 /* LyricsEasyTests.swift */; };
 		68466E031E115208000F6316 /* LyricsEasyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68466E021E115208000F6316 /* LyricsEasyUITests.swift */; };
+		68466E1F1E128635000F6316 /* InsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68466E1E1E128635000F6316 /* InsertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		68466DFE1E115208000F6316 /* LyricsEasyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyricsEasyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68466E021E115208000F6316 /* LyricsEasyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsEasyUITests.swift; sourceTree = "<group>"; };
 		68466E041E115208000F6316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68466E1E1E128635000F6316 /* InsertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				68466DE01E115208000F6316 /* AppDelegate.swift */,
 				68466DE21E115208000F6316 /* MasterViewController.swift */,
 				68466DE41E115208000F6316 /* DetailViewController.swift */,
+				68466E1E1E128635000F6316 /* InsertViewController.swift */,
 				68466DE61E115208000F6316 /* Main.storyboard */,
 				68466DE91E115208000F6316 /* Assets.xcassets */,
 				68466DEB1E115208000F6316 /* LaunchScreen.storyboard */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68466DE51E115208000F6316 /* DetailViewController.swift in Sources */,
+				68466E1F1E128635000F6316 /* InsertViewController.swift in Sources */,
 				68466DE31E115208000F6316 /* MasterViewController.swift in Sources */,
 				68466DE11E115208000F6316 /* AppDelegate.swift in Sources */,
 			);
@@ -421,7 +425,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7RH8SYCWZN;
 				INFOPLIST_FILE = LyricsEasy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DavidWho.LyricsEasy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,7 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7RH8SYCWZN;
 				INFOPLIST_FILE = LyricsEasy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DavidWho.LyricsEasy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -520,6 +524,7 @@
 				68466E091E115208000F6316 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68466E0A1E115208000F6316 /* Build configuration list for PBXNativeTarget "LyricsEasyTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +533,7 @@
 				68466E0C1E115208000F6316 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68466E0D1E115208000F6316 /* Build configuration list for PBXNativeTarget "LyricsEasyUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +542,7 @@
 				68466E0F1E115208000F6316 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
