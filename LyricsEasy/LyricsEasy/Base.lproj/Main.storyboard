@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -88,27 +89,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPW-1V-4Er">
-                                <rect key="frame" x="166" y="323" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="歌名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pqx-LG-nl3">
+                                <rect key="frame" x="16" y="72" width="343" height="30"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GOi-CY-v6a">
+                                <rect key="frame" x="16" y="110" width="343" height="537"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kPW-1V-4Er" firstAttribute="centerY" secondItem="SDl-p8-cXG" secondAttribute="centerY" id="MmB-ei-yCp"/>
-                            <constraint firstItem="kPW-1V-4Er" firstAttribute="centerX" secondItem="SDl-p8-cXG" secondAttribute="centerX" id="fMf-x1-c8f"/>
+                            <constraint firstAttribute="bottom" secondItem="GOi-CY-v6a" secondAttribute="bottom" constant="20" symbolic="YES" id="0aW-ha-ac3"/>
+                            <constraint firstItem="Pqx-LG-nl3" firstAttribute="leading" secondItem="SDl-p8-cXG" secondAttribute="leadingMargin" id="1De-lH-7S5"/>
+                            <constraint firstItem="GOi-CY-v6a" firstAttribute="trailing" secondItem="Pqx-LG-nl3" secondAttribute="trailing" id="5Me-3c-Fri"/>
+                            <constraint firstItem="GOi-CY-v6a" firstAttribute="leading" secondItem="Pqx-LG-nl3" secondAttribute="leading" id="AL4-VL-Nn9"/>
+                            <constraint firstItem="Pqx-LG-nl3" firstAttribute="top" secondItem="Opd-yt-Vl8" secondAttribute="bottom" constant="8" symbolic="YES" id="ARU-Hb-DMQ"/>
+                            <constraint firstItem="GOi-CY-v6a" firstAttribute="top" secondItem="Pqx-LG-nl3" secondAttribute="bottom" constant="8" symbolic="YES" id="HSO-ue-O0n"/>
+                            <constraint firstItem="Pqx-LG-nl3" firstAttribute="trailing" secondItem="SDl-p8-cXG" secondAttribute="trailingMargin" id="X2e-ma-ZlI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="添加歌词" id="pLs-2R-ANX"/>
                     <connections>
-                        <outlet property="asd" destination="kPW-1V-4Er" id="ikW-vN-81q"/>
+                        <outlet property="lyricsTextView" destination="GOi-CY-v6a" id="e6i-NJ-sdh"/>
+                        <outlet property="singNameTextField" destination="Pqx-LG-nl3" id="5bq-sH-lNX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLD-1l-dFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708" y="-1318"/>
+            <point key="canvasLocation" x="708" y="-1318.2908545727137"/>
         </scene>
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">

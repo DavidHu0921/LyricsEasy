@@ -10,12 +10,12 @@ import UIKit
 
 class InsertViewController: UIViewController {
 
-    @IBOutlet weak var asd: UILabel!
+    @IBOutlet weak var singNameTextField: UITextField!
+    @IBOutlet weak var lyricsTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.asd.text = "1"
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +24,11 @@ class InsertViewController: UIViewController {
         
         let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelVC(_:)))
         self.navigationItem.leftBarButtonItem = cancelButton
+        
+        lyricsTextView.layer.masksToBounds = true
+        lyricsTextView.layer.cornerRadius = 5
+        lyricsTextView.layer.borderWidth = 1
+        lyricsTextView.layer.borderColor = UIColor.init(colorLiteralRed: 232.0/255.0, green: 232.0/255.0, blue: 232.0/255.0, alpha: 1.0).cgColor
     }
     
     override func didReceiveMemoryWarning() {
