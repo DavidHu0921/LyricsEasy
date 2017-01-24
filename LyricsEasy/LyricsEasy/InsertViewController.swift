@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InsertViewController: UIViewController {
+class InsertViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
     @IBOutlet weak var singNameTextField: UITextField!
     @IBOutlet weak var lyricsTextView: UITextView!
@@ -24,11 +24,18 @@ class InsertViewController: UIViewController {
         
         let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelVC(_:)))
         self.navigationItem.leftBarButtonItem = cancelButton
+
+        let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveVC(_:)))
+        self.navigationItem.rightBarButtonItem = saveButton
+        self.navigationItem.rightBarButtonItem?.isEnabled = false
         
         lyricsTextView.layer.masksToBounds = true
         lyricsTextView.layer.cornerRadius = 5
         lyricsTextView.layer.borderWidth = 1
         lyricsTextView.layer.borderColor = UIColor.init(colorLiteralRed: 232.0/255.0, green: 232.0/255.0, blue: 232.0/255.0, alpha: 1.0).cgColor
+        
+        singNameTextField.delegate = self
+        lyricsTextView.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,17 +44,47 @@ class InsertViewController: UIViewController {
     }
     
     func cancelVC(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        let titleText = singNameTextField.text
+        let contentText = lyricsTextView.text
+        
+        if !(titleText?.isEmpty)! || !(contentText?.isEmpty)! {
+            let alert = UIAlertController.init(title: "Hint", message: "Are you sure to cancel editting?", preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            let okAction = UIAlertAction(title: "Sure", style: .default, handler: { action -> Void in
+                self.dismiss(animated: true, completion: nil)
+            })
+            
+            alert.addAction(cancelAction)
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func saveVC(_ sender: Any) {
+        
     }
-    */
-
+    
+    // MARK: UITextFieldDelegate && UITextViewDelegate
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        self.navigationItem.rightBarButtonItem?.isEnabled = isTitleAndContentEmpty()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.navigationItem.rightBarButtonItem?.isEnabled = isTitleAndContentEmpty()
+    }
+    
+    func isTitleAndContentEmpty () -> Bool {
+        let titleText = singNameTextField.text
+        let contentText = lyricsTextView.text
+        
+        if (titleText?.isEmpty)! && (contentText?.isEmpty)! {
+            return false
+        } else {
+            return true
+        }
+    }
 }

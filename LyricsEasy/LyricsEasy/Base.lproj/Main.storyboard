@@ -77,7 +77,7 @@
             </objects>
             <point key="canvasLocation" x="-856" y="-330"/>
         </scene>
-        <!--添加歌词-->
+        <!--Edit Lyrics-->
         <scene sceneID="7Pz-ki-RUs">
             <objects>
                 <viewController storyboardIdentifier="InsertViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yga-Sb-GjA" customClass="InsertViewController" customModule="LyricsEasy" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,7 +113,7 @@
                             <constraint firstItem="Pqx-LG-nl3" firstAttribute="trailing" secondItem="SDl-p8-cXG" secondAttribute="trailingMargin" id="X2e-ma-ZlI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="添加歌词" id="pLs-2R-ANX"/>
+                    <navigationItem key="navigationItem" title="Edit Lyrics" id="pLs-2R-ANX"/>
                     <connections>
                         <outlet property="lyricsTextView" destination="GOi-CY-v6a" id="e6i-NJ-sdh"/>
                         <outlet property="singNameTextField" destination="Pqx-LG-nl3" id="5bq-sH-lNX"/>
