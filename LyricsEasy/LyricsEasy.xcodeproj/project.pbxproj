@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		682E39F41E2BC44F00F692A5 /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 682E39F31E2BC44F00F692A5 /* FileKit.framework */; };
+		6831B5201E373C7700AC94F0 /* FileKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831B51F1E373C7700AC94F0 /* FileKitManager.swift */; };
 		68466DE11E115208000F6316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68466DE01E115208000F6316 /* AppDelegate.swift */; };
 		68466DE31E115208000F6316 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68466DE21E115208000F6316 /* MasterViewController.swift */; };
 		68466DE51E115208000F6316 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68466DE41E115208000F6316 /* DetailViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		682E39F31E2BC44F00F692A5 /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/iOS/FileKit.framework; sourceTree = "<group>"; };
+		6831B51F1E373C7700AC94F0 /* FileKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileKitManager.swift; sourceTree = "<group>"; };
 		68466DDD1E115208000F6316 /* LyricsEasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyricsEasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68466DE01E115208000F6316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68466DE21E115208000F6316 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				68466DE21E115208000F6316 /* MasterViewController.swift */,
 				68466DE41E115208000F6316 /* DetailViewController.swift */,
 				68466E1E1E128635000F6316 /* InsertViewController.swift */,
+				6831B51F1E373C7700AC94F0 /* FileKitManager.swift */,
 				68466DE61E115208000F6316 /* Main.storyboard */,
 				68466DE91E115208000F6316 /* Assets.xcassets */,
 				68466DEB1E115208000F6316 /* LaunchScreen.storyboard */,
@@ -302,6 +305,7 @@
 				68466E1F1E128635000F6316 /* InsertViewController.swift in Sources */,
 				68466DE31E115208000F6316 /* MasterViewController.swift in Sources */,
 				68466DE11E115208000F6316 /* AppDelegate.swift in Sources */,
+				6831B5201E373C7700AC94F0 /* FileKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
