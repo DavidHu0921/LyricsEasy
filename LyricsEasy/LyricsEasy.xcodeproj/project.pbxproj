@@ -156,7 +156,7 @@
 				68466DD91E115208000F6316 /* Sources */,
 				68466DDA1E115208000F6316 /* Frameworks */,
 				68466DDB1E115208000F6316 /* Resources */,
-				682E39F11E2BC34600F692A5 /* ShellScript */,
+				682E39F11E2BC34600F692A5 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -280,7 +280,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		682E39F11E2BC34600F692A5 /* ShellScript */ = {
+		682E39F11E2BC34600F692A5 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,6 +288,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/FileKit.framework",
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
