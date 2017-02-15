@@ -18,9 +18,13 @@ public struct LyricsFile {
 }
 
 class FileKitManager: NSObject {
-    let lpath = Path("~")
+    let rootPath = Path("~")
     
-    let textFiles = Path.userDesktop.find(searchDepth: 5) { path in
-        path.pathExtension == "txt"
+    func saveLyrice(lyrice: LyricsFile) -> Bool {
+        let fileName:String = lyrice.lyricsTitle + ".txt"
+        
+        
+        
+        return false
     }
 }

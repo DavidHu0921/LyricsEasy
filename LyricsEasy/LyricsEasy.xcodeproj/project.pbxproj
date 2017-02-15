@@ -55,6 +55,7 @@
 		68466E021E115208000F6316 /* LyricsEasyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsEasyUITests.swift; sourceTree = "<group>"; };
 		68466E041E115208000F6316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68466E1E1E128635000F6316 /* InsertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertViewController.swift; sourceTree = "<group>"; };
+		685E4C0B1E4F6D5A00B63E67 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +116,7 @@
 		68466DDF1E115208000F6316 /* LyricsEasy */ = {
 			isa = PBXGroup;
 			children = (
+				685E4C0B1E4F6D5A00B63E67 /* MyPlayground.playground */,
 				68466DE01E115208000F6316 /* AppDelegate.swift */,
 				68466DE21E115208000F6316 /* MasterViewController.swift */,
 				68466DE41E115208000F6316 /* DetailViewController.swift */,
