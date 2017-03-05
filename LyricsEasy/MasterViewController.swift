@@ -18,14 +18,23 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.leftBarButtonItem = self.editButtonItem
-
+//        self.navigationItem.leftBarButtonItem = self.editButtonItem
+//        let searchLyrics = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(searchLy(_:)));
+        let searchLyrics = UIBarButtonItem(title: "search", style: .plain, target: self, action: #selector(searchLy(sender:)))
+        self.navigationItem.leftBarButtonItem = searchLyrics
+        
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+    }
+    
+    func searchLy(sender: UIBarButtonItem) {
+        let fileManager = FileKitManager()
+        let allPath = fileManager.readFiles()
+        print("all path string is \(allPath)")
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -10,16 +10,23 @@ import Foundation
 import FileKit
 
 public struct LyricsFile {
-    var basicPath:String = ""
-    var lyricsTitle:String = ""
-    var lyricsContent:String = ""
-    var lyricsContentForShow:String = ""
+    var basicPath:String
+    var lyricsTitle:String
+    var lyricsContent:String
+    var lyricsContentForShow:String
     
 }
 
 class FileKitManager: NSObject {
     let rootPath = Path("~")
     
+    func readFiles() -> String {
+        let textFiles = rootPath.find(searchDepth: 5) { path in
+            path.pathExtension == "txt"
+        }
+        
+        return String(describing: textFiles)
+    }
     
     func newLyricsFile(lyrice:LyricsFile) -> Bool {
         do {
@@ -39,7 +46,7 @@ class FileKitManager: NSObject {
     func saveLyrice(lyrice: LyricsFile) -> Bool {
         do {
             try lyrice.lyricsContent |> TextFile(path: rootPath + lyrice.lyricsTitle + ".txt")
-            
+            print("save file success")
             return true
         } catch {
             print("I can't write to a file?!")
