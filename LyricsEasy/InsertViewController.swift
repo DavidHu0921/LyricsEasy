@@ -64,7 +64,14 @@ class InsertViewController: UIViewController, UITextFieldDelegate, UITextViewDel
     }
     
     func saveVC(_ sender: Any) {
+        guard let t = self.singNameTextField.text else { return }
+        guard let c = self.lyricsTextView.text else { return }
         
+        let lyFile = LyricsFile(basicPath: "", lyricsTitle: t, lyricsContent: c, lyricsContentForShow: "")
+        
+        let filemanager = FileKitManager()
+        let b = filemanager.newLyricsFile(lyrice: lyFile)
+        print("is file save success: \(b)")
     }
     
     // MARK: UITextFieldDelegate && UITextViewDelegate

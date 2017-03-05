@@ -52,6 +52,5 @@ class FileKitManager: NSObject {
             print("I can't write to a file?!")
             return false
         }
-        return false
     }
 }
